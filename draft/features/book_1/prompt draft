@@ -1,0 +1,11 @@
+1. Single text entry exit node..
+Rendered as html into unified scroll view
+2. Render(books.1, area)
+Book={get 1:function(){
+var sources=(timestamped_geotags)
+//geotags object: 
+//keys are js timestamps, 
+var rules=()
+return 
+//
+}}

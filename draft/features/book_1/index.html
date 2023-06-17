@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <p><button onclick="render_01()">Render</button></p>
+    <p><textarea name="" id="geo_note1" cols="30" rows="10" placeholder="Note for geo"></textarea>
+    <button onclick="add_timestamped_geo_and_desc()">Pos Note</button>
+    </p>
+</div>
+<div id="Render_div">
+
+</div>
+
+<script>
+var def_rdiv1=document.getElementById("Render_div")
+var cloBJ = {//replace with proxy -> cl 
+    5798:{
+       
+    },
+    5783:{ //screwed by AI
+        prefixed_timestamp1:{
+                    timestamp:'timestamp1',
+                    latitude:'',
+                    longitude:'',
+                }
+    },
+    5784:{
+        timestamp1:{
+
+        }
+    },
+    // 23024:{}
+    5788:{
+        timestamp:{long:'',lat:''}
+        // ,desc:''}
+    },
+    5798:{
+        timestamp:{
+
+        }
+    }
+
+
+}
+var Books={
+    get 1(){
+        var classifiers  = ['','']//geotags with desc, timestamped text entries 
+        //data sources
+    }
+}
+
+var proBJ = {
+    get what1(){
+        //get initial params
+        //apply rules here
+        return ""
+    }
+}
+function render_01(){
+render_02(def_rdiv1)
+}
+function render_02(where){
+    let what = proBJ.what1;
+render_03(where,what)
+}
+function render_03(where,what){
+where.innerHTML = what;
+}
+function add_timestamped_geo_and_desc(){
+    var geo = {}
+    var desc = '';
+    var timestamp;
+    var coords;
+    var long;//no need to decompose yet -> another type for elaboration can be added when needed
+    //shadow objects (multi-tree)
+    var lat; 
+
+    desc=document.getElementById("geo_note1").value;
+    function geosuccess(coo){
+        geo = coo;
+        console.log("geo: ", geo)
+        console.log("geo time: ", geo.timestamp)
+        console.log("desc: ", desc)
+        cloBJ[5788][]
+    }
+    function storeLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(geosuccess);
+      } else {
+        console.log('Geolocation is not supported by this browser.');
+      }
+    }
+    storeLocation()
+}
+</script>
+</body>
+</html>
